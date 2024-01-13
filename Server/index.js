@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use("/api",userRoute);
 
-app.use("/",()=>{
+app.use("/",(req,res)=>{
     res.json("I am home page")
 })
 
