@@ -11,7 +11,7 @@ const Port = process.env.PORT || 4000;
 dbConnect();
 
 app.use(cors({
-    origin: "https://shashant-task-number1-proptimize-novy.vercel.app/",
+    origin: "https://ta-1-ui.onrender.com",
     credentials: true
 }))
 
