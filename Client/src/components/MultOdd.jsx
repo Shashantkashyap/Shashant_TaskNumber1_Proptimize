@@ -9,7 +9,7 @@ function MultOdd() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${BaseUrl}/odd`);
+      const response = await axios.get(`https://t-1-pw4c.onrender.com/api/odd`);
       const data = response.data.data;
 
       setUserData(data);
