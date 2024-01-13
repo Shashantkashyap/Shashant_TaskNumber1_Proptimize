@@ -22,6 +22,10 @@ app.use(express.json());
 
 app.use("/api",userRoute);
 
+app.use("/",()=>{
+    res.json("I am home page")
+})
+
 app.listen(Port,()=>{
     console.log(`app is listening on Port no ${Port}`)
 })
