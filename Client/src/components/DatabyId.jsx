@@ -10,7 +10,7 @@ function DatabyId() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`${BaseUrl}/dataById`, { id });
+      const response = await axios.post(`https://t-1-pw4c.onrender.com/api/dataById`, { id });
       const dataa = response.data.data;
       setData(dataa);
     } catch (error) {
