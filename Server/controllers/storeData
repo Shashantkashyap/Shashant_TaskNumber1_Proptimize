@@ -1,0 +1,60 @@
+
+
+const axios = require("axios");
+const User = require("../models/User.model");
+const Company = require("../models/Company.model");
+const Address = require("../models/Address.model")
+
+// fuction to fetch data from json file
+
+const getData = async()=>{
+    const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+    const jsonData =await response.data
+    return jsonData ; 
+}
+
+// function to store data from json file to mongoDb
+
+const storeData = ()=>{
+    getData().then(async()=>{
+        const data = await getData();
+
+        data.forEach(async(ele) => {
+          let c =  await Company.create({
+                name:ele.company.name,
+                catchPhrase:ele.company.catchPhrase,
+                bs:ele.company.bs
+               }) 
+
+            let a =   await Address.create({
+                street:ele.address.street,
+                suite:ele.address.suite,
+                city:ele.address.city,
+                zipcode:ele.address.zipcode
+               })
+
+
+               await User.create({
+                id:ele.id,
+                name:ele.name,
+                userName:ele.username,
+                email:ele.email,
+                address: a._id,
+                phone:ele.phone,
+                website:ele.website,
+                company: c._id,
+               })
+
+
+
+        });
+
+        
+
+
+    })
+}
+
+module.exports = storeData;
+
+

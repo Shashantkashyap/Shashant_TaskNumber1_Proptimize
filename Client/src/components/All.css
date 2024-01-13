@@ -1,0 +1,30 @@
+/* All.css */
+
+.all-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .user-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    transition: all;
+    transition-duration: 200ms;
+  }
+
+  .user-card:hover{
+    scale: 1.02;
+    background: #edebeb;
+  }
+  
+  .address-section,
+  .company-section {
+    margin-top: 10px;
+  }
+  

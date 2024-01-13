@@ -1,0 +1,18 @@
+/* Navbar.css */
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    
+    width: 98vw;
+    background-color: #3498db; /* Set your desired background color */
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* Set your desired text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  

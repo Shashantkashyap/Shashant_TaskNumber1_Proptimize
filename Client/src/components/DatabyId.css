@@ -1,0 +1,76 @@
+/* DatabyId.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .option{
+    display: flex;
+   margin-top: 10px;
+    justify-content: end;
+    margin-right: 100px;
+  }
+  
+  .card {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .select-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  select {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  .user-details {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .address-section,
+  .company-section {
+    margin-top: 16px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .address-section h3,
+  .company-section h3 {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
