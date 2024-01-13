@@ -10,7 +10,7 @@ const All = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${BaseUrl}/showAll`);
+      const response = await axios.get(`https://t-1-pw4c.onrender.com/api/showAll`);
       const data = response.data.data;
 
       setUserData(data);
