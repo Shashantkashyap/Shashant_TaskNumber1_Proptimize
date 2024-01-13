@@ -20,7 +20,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use("/api",userRoute);
+app.use(userRoute);
 
 app.listen(Port,()=>{
     console.log(`app is listening on Port no ${Port}`)
