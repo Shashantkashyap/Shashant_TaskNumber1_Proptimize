@@ -4,10 +4,12 @@ import "./Mult2.css"
 
 function MultOdd() {
   const [userData, setUserData] = useState([]);
+  const BaseUrl = import.meta.env.VITE_BASE_URL;
+  
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/odd");
+      const response = await axios.get(`${BaseUrl}/odd`);
       const data = response.data.data;
 
       setUserData(data);

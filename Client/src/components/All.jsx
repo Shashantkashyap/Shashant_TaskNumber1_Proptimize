@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './All.css'; 
+import dotenv from "dotenv"
 
 const All = () => {
+
+  const BaseUrl = import.meta.env.VITE_BASE_URL;
   const [userData, setUserData] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/showAll");
+      const response = await axios.get(`${BaseUrl}/showAll`);
       const data = response.data.data;
 
       setUserData(data);

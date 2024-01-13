@@ -5,9 +5,12 @@ import "./Mult2.css"
 function Mult2() {
   const [userData, setUserData] = useState([]);
 
+  const BaseUrl = import.meta.env.VITE_BASE_URL;
+  
+
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/even");
+      const response = await axios.get(`${BaseUrl}/even`);
       const data = response.data.data;
 
       setUserData(data);

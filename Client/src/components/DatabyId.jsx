@@ -3,12 +3,14 @@ import axios from 'axios';
 import "./DatabyId.css"
 
 function DatabyId() {
+
+  const BaseUrl = import.meta.env.VITE_BASE_URL;
   const [data, setData] = useState(null);
   const [id, setId] = useState(null);
 
   const fetchData = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/dataById", { id });
+      const response = await axios.post(`${BaseUrl}/dataById`, { id });
       const dataa = response.data.data;
       setData(dataa);
     } catch (error) {
