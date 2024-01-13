@@ -11,9 +11,13 @@ const Port = process.env.PORT || 4000;
 dbConnect();
 
 app.use(cors({
-    origin: "https://shashant-task-number1-proptimize-novy.vercel.app/",
+    origin: "https://shashant-task-number1-proptimize-novy.vercel.app",
     credentials: true
 }))
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://shashant-task-number1-proptimize-novy.vercel.app');
+    next();
+});
 
 //fetchData(); data fetched ad store to mongo db
 
