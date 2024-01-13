@@ -11,7 +11,7 @@ const Port = process.env.PORT || 4000;
 dbConnect();
 
 app.use(cors({
-    origin: "https://shashant-task-number1-proptimize-novy.vercel.app",
+    origin: "shashant-task-number1-proptimize-novy-m1qnizksy.vercel.app",
     credentials: true
 }))
 
@@ -20,7 +20,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use(userRoute);
+app.use("/api",userRoute);
 
 app.listen(Port,()=>{
     console.log(`app is listening on Port no ${Port}`)
