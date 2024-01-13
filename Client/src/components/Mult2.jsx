@@ -10,7 +10,7 @@ function Mult2() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${BaseUrl}/even`);
+      const response = await axios.get(`https://t-1-pw4c.onrender.com/api/even`);
       const data = response.data.data;
 
       setUserData(data);
